@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Designing for Decision Confidence — UX Case Study</title>
+<title>Rebuilding the System Behind the Hiring — UX Case Study</title>
 <meta name="description" content="UX strategy for a scalable B2C theatre greeting platform balancing delight, trust, and operational constraints." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -290,32 +290,33 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
 <section class="cs-hero">
   <div class="cs-hero__inner">
     <div class="cs-hero__overline">
-      <span>— Case study · 02 / 02</span>
-      <span>B2C · Hiring Marketplace</span>
+      <span>— Case study · 03</span>
+      <span>B2B · Internal Operations Platform</span>
     </div>
     <h1 class="cs-hero__title">
-      <span class="word"><span>Designing for</span></span>
-      <span class="word"><span><em>Decision</em> Confidence</span></span>
+      <span class="word"><span>Rebuilding the</span></span>
+      <span class="word"><span><em>System</em> Behind</span></span>
+      <span class="word"><span>the Hiring</span></span>
     </h1>
     <p class="cs-hero__sub" id="csSub">
-      — Increasing job applications by removing candidate hesitation, not adding discovery.
+      — Redesigning an internal operations platform so a growing org could scale without scaling chaos.
     </p>
     <div class="cs-hero__meta" id="csMeta">
       <div>
         <div class="cs-hero__meta-item-label">Role</div>
-        <div class="cs-hero__meta-item-value"><em>End-to-end Designer</em></div>
+        <div class="cs-hero__meta-item-value"><em>End-to-end UX</em></div>
       </div>
       <div>
-        <div class="cs-hero__meta-item-label">Scope</div>
-        <div class="cs-hero__meta-item-value">24 weeks</div>
+        <div class="cs-hero__meta-item-label">Timeline</div>
+        <div class="cs-hero__meta-item-value">10 months</div>
       </div>
       <div>
-        <div class="cs-hero__meta-item-label">Team</div>
-        <div class="cs-hero__meta-item-value">10 cross-functional</div>
+        <div class="cs-hero__meta-item-label">Surface</div>
+        <div class="cs-hero__meta-item-value">Internal admin panel</div>
       </div>
       <div>
-        <div class="cs-hero__meta-item-label">Industry</div>
-        <div class="cs-hero__meta-item-value">Startup hiring</div>
+        <div class="cs-hero__meta-item-label">Users</div>
+        <div class="cs-hero__meta-item-value">5 role types</div>
       </div>
     </div>
   </div>
@@ -324,7 +325,7 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
 <!-- COVER -->
 <div class="cs-cover">
   <div class="cs-cover__img">
-    <div class="cs-cover__ph">[ Hero / cover visual — company profile or apply flow mockup ]</div>
+    <div class="cs-cover__ph">[ Hero visual — admin panel overview or role-based dashboard ]</div>
   </div>
 </div>
 
@@ -338,19 +339,19 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
     <div class="cs-assume reveal" style="grid-template-columns:repeat(2,1fr);gap:40px">
       <div class="cs-assume__col">
         <h4><span>01</span>Business problem</h4>
-        <ul><li>The company needed to scale from <strong>500 to 5,000 hires a year</strong>. The blocker wasn't demand — it was a slow hiring funnel, and the slowest stage was resume sourcing.</li></ul>
+        <ul><li>The internal admin panel was built for an earlier, smaller version of the business. As roles, workflows, and data volume grew, <strong>the system stopped matching how teams actually worked</strong>.</li></ul>
       </div>
       <div class="cs-assume__col">
         <h4><span>02</span>Insight</h4>
-        <ul><li>Candidates were <strong>finding</strong> startups but not <strong>applying</strong> to them. The failure was at decision confidence, not discoverability — a different problem than a typical job board solves.</li></ul>
+        <ul><li>Nothing was "broken" on any single screen. The system was <strong>structurally misaligned</strong> — it encoded an org that no longer existed, so users ran on tribal knowledge instead of the system itself.</li></ul>
       </div>
       <div class="cs-assume__col">
         <h4><span>03</span>The move</h4>
-        <ul><li>I reframed the surface from a "find a job" tool into a <strong>"decide on a company"</strong> tool — consolidating fragmented company info, surfacing trust signals at the point of doubt, and stripping the apply flow to essentials.</li></ul>
+        <ul><li>I treated this as a <strong>model problem, not a UI problem</strong>: redefine roles and ownership, restructure workflows into clear stages, and connect entities into one lifecycle. The screens followed the model.</li></ul>
       </div>
       <div class="cs-assume__col">
         <h4><span>04</span>Outcome</h4>
-        <ul><li>Application conversion rose, sourcing time dropped from <strong>2–3 months to 3–5 weeks</strong>, and complete profiles converted at <strong>~1.8&times;</strong> the rate of incomplete ones — validating the thesis: trust drives the apply decision.</li></ul>
+        <ul><li>Steps per core workflow dropped <strong>~40%</strong>, role-based access cut confusion and errors, and consolidating candidate context into a single view sped up decisions — without weakening the validation that keeps hiring accountable.</li></ul>
       </div>
     </div>
   </div>
@@ -364,158 +365,137 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
       <div class="cs-sec__num">01</div>
     </div>
     <div class="cs-twocol">
-      <h2 class="cs-twocol__heading reveal">A target that <em>broke the funnel</em>.</h2>
+      <h2 class="cs-twocol__heading reveal">A system modelling an org that <em>no longer existed</em>.</h2>
       <div class="cs-twocol__body reveal">
-        <p>The platform is a hiring marketplace for startups. Leadership had a hard target: grow from <strong>500 to 5,000 hires annually</strong> over 2–3 years, without proportionally growing cost.</p>
-        <p>At 500 hires a year, roles were taking <strong>4–6 months to close</strong>. At that velocity, 5,000 was arithmetically impossible — the funnel would collapse under its own latency long before headcount scaled.</p>
-        <p>So the real brief wasn't "redesign the job pages." It was: <em>where in the hiring funnel is time leaking, and can design close the leak without adding headcount?</em></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOTTLENECK -->
-<section class="cs-sec">
-  <div class="cs-sec__inner">
-    <div class="cs-sec__head">
-      <div class="cs-sec__label">— Finding the bottleneck</div>
-      <div class="cs-sec__num">02</div>
-    </div>
-    <div class="cs-twocol" style="margin-bottom:60px">
-      <h2 class="cs-twocol__heading reveal">Where time <em>leaked</em>.</h2>
-      <div class="cs-twocol__body reveal">
-        <p>I analysed <strong>200+ job closures across 50+ startups</strong> to locate the delay, stage by stage. The goal state was under 2 months end-to-end.</p>
-        <p>Sourcing was the single largest block of time <em>and</em> it poisoned everything downstream — a candidate sourced reluctantly is one who later ghosts the offer or quits in 90 days. Hiring data backed this: ~50% offer drop-out, ~40% attrition inside 90 days.</p>
-        <p><strong>Decision:</strong> I scoped the project to resume sourcing. Fixing the first domino had the highest leverage on the business goal and the cleanest causal line to the downstream symptoms.</p>
-      </div>
-    </div>
-
-    <div class="cs-funnel reveal">
-      <div class="cs-funnel__row cs-funnel__row--hot">
-        <div class="cs-funnel__stage">Resume sourcing</div>
-        <div class="cs-funnel__time">2–3 months</div>
-        <div class="cs-funnel__note">Only ~2 of 10 shortlisted candidates were actually interested in applying</div>
-        <div class="cs-funnel__flag">Bottleneck</div>
-      </div>
-      <div class="cs-funnel__row">
-        <div class="cs-funnel__stage">Screening</div>
-        <div class="cs-funnel__time">~3 weeks</div>
-        <div class="cs-funnel__note">Manual, HR-led</div>
-        <div class="cs-funnel__flag"></div>
-      </div>
-      <div class="cs-funnel__row">
-        <div class="cs-funnel__stage">Interviews</div>
-        <div class="cs-funnel__time">1–2 months</div>
-        <div class="cs-funnel__note">Last-minute reschedules and cancellations</div>
-        <div class="cs-funnel__flag"></div>
-      </div>
-      <div class="cs-funnel__row">
-        <div class="cs-funnel__stage">Offer acceptance</div>
-        <div class="cs-funnel__time">1–2 weeks</div>
-        <div class="cs-funnel__note">Candidates waited out competing interviews</div>
-        <div class="cs-funnel__flag"></div>
+        <p>The platform&rsquo;s hiring operations run on an internal admin panel — the system recruiters, account directors, and admins use to manage companies, jobs, and candidates end to end.</p>
+        <p>The business goal was straightforward: <strong>manage end-to-end hiring operations through a system that scales</strong> across more roles, more workflows, and rising data volume.</p>
+        <p>The system had been built for an earlier business model, and as that model evolved — new roles, new responsibilities, new steps — the platform was patched rather than rethought.</p>
+        <p>So the brief wasn&rsquo;t &ldquo;polish the admin panel.&rdquo; It was: <em>the system models an org that no longer exists — how do we rebuild it to match reality and survive growth?</em></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WHY UNSOLVED -->
-<section class="cs-sec" style="background:var(--bg-soft)">
+<section class="cs-sec">
   <div class="cs-sec__inner">
     <div class="cs-sec__head">
-      <div class="cs-sec__label">— Why this hadn't been solved</div>
-      <div class="cs-sec__num">03</div>
+      <div class="cs-sec__label">— Why this hadn&rsquo;t been solved</div>
+      <div class="cs-sec__num">02</div>
     </div>
     <div class="cs-twocol">
-      <h2 class="cs-twocol__heading reveal">Solving the <em>wrong problem</em>.</h2>
+      <h2 class="cs-twocol__heading reveal">Internal tools rot <em>quietly</em>.</h2>
       <div class="cs-twocol__body reveal">
-        <p>Job marketplaces are overwhelmingly optimised for <strong>discovery</strong> — search, filters, more listings, better matching. That makes sense when the problem is "candidates can't find roles."</p>
-        <p>But our funnel data said the opposite. Candidates <em>were</em> reaching startup roles. Only 2 in 10 shortlisted candidates were willing to apply. They could see the door; they wouldn't walk through it.</p>
-        <p>A better search bar can't fix that. <strong>The category had been solving for findability when the real failure was confidence.</strong> That gap was the opening.</p>
+        <p>They get built once, work &ldquo;well enough,&rdquo; and then accrete features one request at a time as the company grows. Nobody redesigns them because they technically <em>function</em> — so the cost stays invisible.</p>
+        <p>But that cost is real. It shows up as a <strong>learning curve</strong> for every new hire, as <strong>coordination tax</strong> between teams who verbally negotiate ownership, and as <strong>fragmented work</strong> spread across disconnected modules. None of it appears on a bug tracker. It just makes the org slower as it scales.</p>
+        <p>The admin panel didn&rsquo;t need better buttons — it needed its underlying model rebuilt before the operational complexity it was hiding became the ceiling on hiring growth.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STRATEGIC FRAME -->
-<section class="cs-sec">
+<section class="cs-sec" style="background:var(--bg-soft)">
   <div class="cs-sec__inner">
     <div class="cs-sec__head">
       <div class="cs-sec__label">— Strategic frame</div>
-      <div class="cs-sec__num">04</div>
+      <div class="cs-sec__num">03</div>
     </div>
     <div class="cs-twocol" style="margin-bottom:60px">
-      <h2 class="cs-twocol__heading reveal">Metrics that say <em>no</em> for you.</h2>
+      <h2 class="cs-twocol__heading reveal">Three forces, <em>one alignment</em>.</h2>
       <div class="cs-twocol__body reveal">
-        <p>Before designing anything, I fixed the success metrics and guardrails so the team could say no to the wrong ideas.</p>
-        <p><strong>Explicitly out of scope:</strong> the employer-side dashboard, screening automation, scheduling, and anything post-offer. All real problems — but downstream of the bottleneck I was solving. Scoping them out was a decision, not an omission.</p>
+        <p>I aligned business, users, and system up front — and set the metrics the redesign had to move.</p>
+        <p><strong>Out of scope:</strong> the candidate-facing marketplace (a separate workstream). This project was strictly the internal operations layer — scoping it tightly is what made a 10-month structural rebuild tractable.</p>
       </div>
     </div>
 
     <div class="cs-cards reveal">
       <div class="cs-card">
         <div class="cs-card__tag">North Star</div>
-        <div class="cs-card__title">Application conversion at sourcing</div>
-        <div class="cs-card__desc">Shortlisted &rarr; applied. I deliberately did <em>not</em> pick "total applications" — raw volume can be inflated with low-intent clicks that just move the bottleneck downstream.</div>
+        <div class="cs-card__title">Steps to complete a core workflow</div>
+        <div class="cs-card__desc">A scaling system has to make the common path shorter, not just prettier.</div>
       </div>
       <div class="cs-card">
         <div class="cs-card__tag">Guardrail</div>
-        <div class="cs-card__title">Candidate fit must not degrade</div>
-        <div class="cs-card__desc">If conversion rose but interview-to-offer quality dropped, we'd have manufactured noise, not velocity. We watched fit as a counter-metric.</div>
+        <div class="cs-card__title">Validation integrity must not degrade</div>
+        <div class="cs-card__desc">Speed can&rsquo;t come from deleting the checks that keep hiring accountable. This is why I kept a maker&ndash;checker step rather than removing approval friction.</div>
       </div>
       <div class="cs-card">
         <div class="cs-card__tag">Supporting</div>
         <div class="cs-card__title">The signals beneath</div>
         <ul class="cs-card__list" style="margin-top:18px">
-          <li>Sourcing time</li>
-          <li>Profile views</li>
-          <li>Apply-flow completion</li>
+          <li>Role-confusion incidents</li>
+          <li>Cross-module switches per task</li>
+          <li>New-user time-to-proficiency</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section class="cs-sec" style="background:var(--bg-soft)">
+<!-- UNDERSTANDING THE SYSTEM -->
+<section class="cs-sec">
   <div class="cs-sec__inner">
     <div class="cs-sec__head">
-      <div class="cs-sec__label">— Research</div>
-      <div class="cs-sec__num">05</div>
+      <div class="cs-sec__label">— Understanding the system</div>
+      <div class="cs-sec__num">04</div>
     </div>
     <div class="cs-twocol" style="margin-bottom:60px">
-      <h2 class="cs-twocol__heading reveal">Two passes, <em>two questions</em>.</h2>
+      <h2 class="cs-twocol__heading reveal">Learning how it <em>actually</em> behaved.</h2>
       <div class="cs-twocol__body reveal">
-        <p>Qualitative and exploratory: <strong>12+ depth interviews with startup hiring teams</strong> to understand the supply side, then <strong>20+ in-depth candidate interviews</strong> across the full journey, validated against funnel data with the analytics team.</p>
-        <p>I ran two passes deliberately: hiring teams told me <em>where</em> time leaked; candidates told me <em>why</em> they hesitated.</p>
-      </div>
-    </div>
-
-    <div class="cs-signals reveal">
-      <div class="cs-signal">
-        <div class="cs-signal__num">~70%</div>
-        <div class="cs-signal__label">Low trust in startups</div>
-        <div class="cs-signal__desc">Perceived job insecurity, unknown leadership, unstable environment</div>
-      </div>
-      <div class="cs-signal">
-        <div class="cs-signal__num">68%</div>
-        <div class="cs-signal__label">Incomplete company info</div>
-        <div class="cs-signal__desc">No clear value prop, no product explanation, unknown financial strength</div>
-      </div>
-      <div class="cs-signal">
-        <div class="cs-signal__num">61%</div>
-        <div class="cs-signal__label">Lack of role clarity</div>
-        <div class="cs-signal__desc">Vague JDs, missing team structure, unclear growth path</div>
+        <p>I started by learning the system as it really worked, not as it was documented — exploring the admin panel end to end, mapping workflows across the company, job, and candidate systems, identifying gaps between structure and mental models, and running discussions with stakeholders across every role.</p>
+        <p>The workflows the system was supposed to support: <strong>company creation &amp; management &rarr; validation &amp; client communication &rarr; job creation &amp; assignment &rarr; candidate sourcing &amp; screening &rarr; feedback-driven hiring progression.</strong></p>
+        <p>While mapping these, the core problem surfaced: <em>the system didn&rsquo;t support how users actually operated.</em></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THE REFRAME (hero moment) -->
+<!-- THREE CHALLENGES -->
+<section class="cs-sec" style="background:var(--bg-soft)">
+  <div class="cs-sec__inner">
+    <div class="cs-sec__head">
+      <div class="cs-sec__label">— The three challenges that mattered</div>
+      <div class="cs-sec__num">05</div>
+    </div>
+    <div class="cs-mod reveal">
+      <div class="cs-mod__col">
+        <div class="cs-mod__phase">Challenge 01</div>
+        <div class="cs-mod__title">Unclear ownership across roles</div>
+        <ul class="cs-mod__list">
+          <li>Responsibilities weren&rsquo;t defined in the system</li>
+          <li>No one was sure who owned each hiring stage</li>
+          <li>Created constant dependency on others and confusion across teams</li>
+        </ul>
+      </div>
+      <div class="cs-mod__col">
+        <div class="cs-mod__phase">Challenge 02</div>
+        <div class="cs-mod__title">High learning curve from unstructured workflows</div>
+        <ul class="cs-mod__list">
+          <li>No structure encoded in the system</li>
+          <li>Users navigated on memory and experience</li>
+          <li>New joiners struggled to become productive</li>
+        </ul>
+      </div>
+      <div class="cs-mod__col">
+        <div class="cs-mod__phase">Challenge 03</div>
+        <div class="cs-mod__title">Fragmented workflow across modules</div>
+        <ul class="cs-mod__list">
+          <li>A single task forced users to hop between modules</li>
+          <li>Context broke with every switch</li>
+          <li>Time bled on navigation, not decisions</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:30px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-soft);text-align:center;max-width:700px;margin-left:auto;margin-right:auto">All three trace back to one root: the system structure, not the screens.</p>
+  </div>
+</section>
+
+<!-- THE REFRAME -->
 <section class="cs-pull">
   <div class="cs-pull__inner">
-    <div class="cs-pull__mark">"</div>
-    <p class="cs-pull__text reveal">The problem at resume sourcing was never discoverability. It was <em>hesitation</em>.</p>
+    <div class="cs-pull__mark">&ldquo;</div>
+    <p class="cs-pull__text reveal">This was never a usability problem on individual screens. It was a <em>model</em> problem.</p>
     <div class="cs-pull__attr">— The reframe</div>
   </div>
 </section>
@@ -523,12 +503,12 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
 <section class="cs-sec">
   <div class="cs-sec__inner">
     <div class="cs-twocol">
-      <h2 class="cs-twocol__heading reveal">From <em>find</em> to <em>decide</em>.</h2>
+      <h2 class="cs-twocol__heading reveal">Rebuild the <em>model</em>, then the screens.</h2>
       <div class="cs-twocol__body reveal">
-        <p>Candidates were doing unpaid, high-effort detective work — stitching a picture of each company together from LinkedIn, news, Glassdoor, and the company site — and abandoning the application when the picture stayed incomplete or untrustworthy.</p>
-        <p>So I restated the problem the team was solving:</p>
-        <p style="padding-left:24px;border-left:2px solid var(--accent);margin-top:8px"><strong>From:</strong> "Help candidates find startup roles."<br><strong>To:</strong> "Give candidates enough trust and clarity to decide, in one place, before the doubt sends them away."</p>
-        <p>Every design decision below is downstream of that single sentence.</p>
+        <p>The system encoded an organisation that no longer existed. Individual screens weren&rsquo;t broken — but the relationships between them, the role assumptions baked into the architecture, and the workflow sequence were all residue from an earlier era.</p>
+        <p>So I restated what we were solving:</p>
+        <p style="padding-left:24px;border-left:2px solid var(--accent);margin-top:8px"><strong>From:</strong> &ldquo;Fix the admin panel&rsquo;s usability issues.&rdquo;<br><strong>To:</strong> &ldquo;Rebuild the system&rsquo;s model of the org — roles, workflow stages, and entity relationships — so the interface can finally match how people actually work.&rdquo;</p>
+        <p>Every design decision below is a consequence of fixing the model first.</p>
       </div>
     </div>
   </div>
@@ -544,130 +524,123 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
     <div class="cs-features reveal">
       <div class="cs-feature">
         <div class="cs-feature__num">01</div>
-        <h3 class="cs-feature__title">Consolidate, don't scatter</h3>
-        <div class="cs-feature__row-text">One structured, scannable view per company instead of forcing multi-source research.</div>
+        <h3 class="cs-feature__title">Encode the org, don&rsquo;t assume it</h3>
+        <div class="cs-feature__row-text">Ownership and permissions live in the system, not in people&rsquo;s heads.</div>
       </div>
       <div class="cs-feature">
         <div class="cs-feature__num">02</div>
-        <h3 class="cs-feature__title">Answer doubt where it appears</h3>
-        <div class="cs-feature__row-text">Surface trust signals — funding, team, reviews — exactly where hesitation spikes.</div>
+        <h3 class="cs-feature__title">Structure the work into stages</h3>
+        <div class="cs-feature__row-text">A predictable path beats tribal knowledge.</div>
       </div>
       <div class="cs-feature">
         <div class="cs-feature__num">03</div>
-        <h3 class="cs-feature__title">Clarity before commitment</h3>
-        <div class="cs-feature__row-text">Make role and process expectations legible before the apply button.</div>
+        <h3 class="cs-feature__title">One lifecycle, not many modules</h3>
+        <div class="cs-feature__row-text">Connect entities so context travels with the user.</div>
       </div>
       <div class="cs-feature">
         <div class="cs-feature__num">04</div>
-        <h3 class="cs-feature__title">Friction only where it earns intent</h3>
-        <div class="cs-feature__row-text">Strip the apply flow to essentials; add effort back only where it helps a candidate stand out.</div>
+        <h3 class="cs-feature__title">Speed without losing accountability</h3>
+        <div class="cs-feature__row-text">Remove redundant steps, keep the validation that protects quality.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOLUTION MAPPED TO JOURNEY (pain rows w/ screenshots) -->
+<!-- SOLUTION A/B/C (pain rows with screenshots) -->
 <section class="cs-pain">
   <div class="cs-pain__inner">
     <div class="cs-sec__head">
-      <div class="cs-sec__label">— The solution, mapped to the journey</div>
+      <div class="cs-sec__label">— The solution</div>
       <div class="cs-sec__num">07</div>
     </div>
 
     <div class="cs-painrow">
       <div class="cs-painrow__content">
-        <div class="cs-painrow__num">Discover</div>
-        <h3 class="cs-painrow__title">The structured company profile</h3>
-        <p class="cs-painrow__problem">Candidates relied on multiple sources to understand a company — high-effort and low-confidence.</p>
+        <div class="cs-painrow__num">A</div>
+        <h3 class="cs-painrow__title">Role-based visibility &amp; control</h3>
+        <p class="cs-painrow__problem">Unclear ownership meant no one knew who was responsible at each stage.</p>
         <div class="cs-painrow__sol-label">Response</div>
         <ul class="cs-painrow__list">
-          <li>A single profile consolidating basics, trust signals (reviews, funding), and decision support (active jobs, team &amp; culture) into one scannable view</li>
-          <li><strong>Trade-off:</strong> I chose consolidation over a richer "explore" experience — the <em>effort</em> of assembling information, not its absence, was what killed confidence</li>
+          <li>Role-based access across all user types — each user sees only the data and actions relevant to them</li>
+          <li>Navigation personalised per role — only relevant modules exposed</li>
+          <li>A <strong>maker&ndash;checker</strong> pattern introduced for accountability</li>
+          <li>Admin-level configuration of roles and permissions</li>
         </ul>
+        <p style="margin-top:16px;font-size:14px;color:var(--ink-soft);font-style:italic;border-left:2px solid var(--accent);padding-left:16px"><strong>Why maker&ndash;checker stayed:</strong> it adds deliberate friction. I kept it because the guardrail was validation integrity — removing approval would have sped things up while quietly raising error risk in client-facing hiring decisions.</p>
       </div>
       <div class="cs-painrow__visual">
-        <div class="cs-painrow__ph">[ Company profile screen ]</div>
+        <div class="cs-painrow__ph">[ Role-based navigation / Super Admin vs restricted view ]</div>
       </div>
     </div>
 
     <div class="cs-painrow cs-painrow--flip">
       <div class="cs-painrow__content">
-        <div class="cs-painrow__num">Evaluate</div>
-        <h3 class="cs-painrow__title">The jobs listing</h3>
-        <p class="cs-painrow__problem">Candidates struggled to confirm a role was relevant before investing attention.</p>
+        <div class="cs-painrow__num">B</div>
+        <h3 class="cs-painrow__title">Task &amp; process simplification</h3>
+        <p class="cs-painrow__problem">No encoded structure meant users navigated on memory; new joiners couldn&rsquo;t become productive.</p>
         <div class="cs-painrow__sol-label">Response</div>
         <ul class="cs-painrow__list">
-          <li>A focused listing surfacing all open roles upfront with search, filters, and scannable cards (location, type, experience, openings, recency)</li>
-          <li><strong>Why:</strong> lets a candidate confirm "is there a fit for me here?" before they emotionally invest — protecting against sunk-cost hesitation</li>
+          <li>Hiring turned into a structured, stage-based flow: <strong>Sourcing &rarr; Screening &rarr; Validation &rarr; Client Sharing</strong></li>
+          <li>Reduced redundant steps and loops in task progression</li>
+          <li>System-triggered notifications to prompt timely action</li>
+          <li>Standardised workflow behaviour across all hiring activities</li>
         </ul>
+        <p style="margin-top:16px;font-size:14px;color:var(--ink-soft);font-style:italic">This is where the ~40% reduction in task steps comes from — and why a new user can now follow the system instead of needing a veteran to explain it.</p>
       </div>
       <div class="cs-painrow__visual">
-        <div class="cs-painrow__ph">[ Jobs listing screen ]</div>
+        <div class="cs-painrow__ph">[ Structured workflow / stage-based task progression ]</div>
       </div>
     </div>
 
     <div class="cs-painrow">
       <div class="cs-painrow__content">
-        <div class="cs-painrow__num">Decide</div>
-        <h3 class="cs-painrow__title">The job detail page</h3>
-        <p class="cs-painrow__problem">Candidates lacked clarity on the role, expectations, and hiring process — so they stalled.</p>
+        <div class="cs-painrow__num">C</div>
+        <h3 class="cs-painrow__title">Unified system architecture &amp; data model</h3>
+        <p class="cs-painrow__problem">A single task forced users to hop between modules, breaking continuity and bleeding time.</p>
         <div class="cs-painrow__sol-label">Response</div>
         <ul class="cs-painrow__list">
-          <li>JD and skills for role clarity; role expectations and the named hiring manager for human trust; a visible step-by-step hiring process for decision confidence</li>
-          <li><strong>Why visible process:</strong> uncertainty about "what happens after I apply" was a recurring hesitation trigger that competing offers exploit</li>
+          <li>Platform reorganised around core entities — <strong>companies, jobs, candidates</strong> — with explicit relationships forming one connected hiring lifecycle</li>
+          <li>Candidates trackable consistently across every stage</li>
+          <li>Bottlenecks visible because the lifecycle is connected, not siloed</li>
+          <li>Key data layers separated (candidate data vs. user data) to reduce conflicts and improve scalability</li>
         </ul>
+        <p style="margin-top:16px;font-size:14px;color:var(--ink-soft);font-style:italic;border-left:2px solid var(--accent);padding-left:16px"><strong>Why separate data layers:</strong> candidate and user data were tangled in the old system, causing conflicts and blocking clean scaling. Splitting them was an unglamorous structural call, but it&rsquo;s what lets the system grow without data collisions.</p>
       </div>
       <div class="cs-painrow__visual">
-        <div class="cs-painrow__ph">[ Job detail screen ]</div>
-      </div>
-    </div>
-
-    <div class="cs-painrow cs-painrow--flip">
-      <div class="cs-painrow__content">
-        <div class="cs-painrow__num">Act</div>
-        <h3 class="cs-painrow__title">The apply flow</h3>
-        <p class="cs-painrow__problem">Complex final steps caused drop-offs at the last moment.</p>
-        <div class="cs-painrow__sol-label">Response</div>
-        <ul class="cs-painrow__list">
-          <li>A guided flow asking only for essentials (resume), plus an <strong>optional</strong> intro video as a differentiation nudge ("be in the top 20%")</li>
-          <li><strong>Trade-off:</strong> the video is optional, not mandatory — high-intent candidates self-select to stand out without taxing everyone else</li>
-        </ul>
-      </div>
-      <div class="cs-painrow__visual">
-        <div class="cs-painrow__ph">[ Apply flow screen ]</div>
+        <div class="cs-painrow__ph">[ Unified lifecycle / company&ndash;job&ndash;candidate connection ]</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT I CUT -->
+<!-- WHAT I DEFERRED -->
 <section class="cs-sec">
   <div class="cs-sec__inner">
     <div class="cs-sec__head">
-      <div class="cs-sec__label">— Feature prioritisation: what I cut</div>
+      <div class="cs-sec__label">— What I deferred</div>
       <div class="cs-sec__num">08</div>
     </div>
     <div class="cs-twocol" style="margin-bottom:50px">
-      <h2 class="cs-twocol__heading reveal">The discipline of <em>no</em>.</h2>
+      <h2 class="cs-twocol__heading reveal">The discipline of <em>sequencing</em>.</h2>
       <div class="cs-twocol__body reveal">
-        <p>Not everything that tested well shipped. Each cut traces back to the North Star or a guardrail — that's the test I used to say no.</p>
+        <p>A 10-month rebuild forced hard calls. Each deferral protected the North Star or the guardrail — that was my test for cutting.</p>
       </div>
     </div>
     <div class="cs-mod reveal">
       <div class="cs-mod__col">
-        <div class="cs-mod__phase">Cut</div>
-        <div class="cs-mod__title">Salary on every card</div>
-        <ul class="cs-mod__list"><li>High candidate demand, but employer-side data was inconsistent and partly out of scope. Surfacing unreliable data would erode the trust we were building.</li></ul>
+        <div class="cs-mod__phase">Sequenced</div>
+        <div class="cs-mod__title">Audit-log &amp; compliance tooling</div>
+        <ul class="cs-mod__list"><li>Valuable, but a layer to add after the role model was sound. Sequencing, not omission.</li></ul>
       </div>
       <div class="cs-mod__col">
         <div class="cs-mod__phase">Deferred</div>
-        <div class="cs-mod__title">In-profile messaging</div>
-        <ul class="cs-mod__list"><li>Appealing, but it shifted the surface from "decide" to "communicate," and risked spam on the employer side.</li></ul>
+        <div class="cs-mod__title">Per-field permissions</div>
+        <ul class="cs-mod__list"><li>Deferred in favour of role-level access — per-field control added complexity that outran current need.</li></ul>
       </div>
       <div class="cs-mod__col">
-        <div class="cs-mod__phase">Kept light</div>
-        <div class="cs-mod__title">Culture media galleries</div>
-        <ul class="cs-mod__list"><li>Research said candidates wanted substance (funding, team, role) over polish; heavy media risked looking like marketing and lowering trust.</li></ul>
+        <div class="cs-mod__phase">Constrained</div>
+        <div class="cs-mod__title">Self-serve role builder</div>
+        <ul class="cs-mod__list"><li>Kept role configuration at admin level to avoid permission sprawl before the model had stabilised.</li></ul>
       </div>
     </div>
   </div>
@@ -683,55 +656,47 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
     <div class="cs-twocol" style="margin-bottom:70px">
       <h2 class="cs-twocol__heading reveal">What <em>moved</em>.</h2>
       <div class="cs-twocol__body reveal">
-        <p>I framed measurement as a cohort comparison — the new structured experience against the legacy one. One metric mattered more than the rest, because it isolated the exact variable I set out to design for.</p>
+        <p>I compared core workflows before and after the rebuild, watching the validation guardrail alongside. The key question: did the system get faster without getting reckless?</p>
       </div>
     </div>
 
     <!-- Hero proof metric -->
     <div class="cs-impact-hero reveal">
       <div class="cs-impact-hero__left">
-        <div class="cs-impact-hero__tag">The metric I trust most</div>
-        <div class="cs-impact-hero__num">1.8&times;</div>
+        <div class="cs-impact-hero__tag">The headline</div>
+        <div class="cs-impact-hero__num">~40%</div>
       </div>
       <div class="cs-impact-hero__right">
-        <p class="cs-impact-hero__claim">Complete-information profiles converted candidates at <strong>~1.8&times; the rate of incomplete ones.</strong></p>
-        <p class="cs-impact-hero__why">This is the cleanest proof of the thesis. It isolates the single variable I designed for — completeness and trust — and shows it, not discovery, driving the apply decision.</p>
+        <p class="cs-impact-hero__claim"><strong>Fewer steps per core workflow.</strong> Task complexity dropped across the board once the system was restructured into stages.</p>
+        <p class="cs-impact-hero__why">This is the metric that validates the structural approach — the improvement came from rethinking the model, not optimising individual screens.</p>
       </div>
     </div>
 
     <!-- Primary wins -->
     <div class="cs-impact-row reveal">
       <div class="cs-impact-card cs-impact-card--primary">
-        <div class="cs-impact-card__num">+35%</div>
-        <div class="cs-impact-card__label">Application conversion <span>North Star</span></div>
-        <div class="cs-impact-card__desc">Higher intent once candidates could evaluate role and company in one place.</div>
+        <div class="cs-impact-card__num">100%</div>
+        <div class="cs-impact-card__label">Role-based access <span>Clarity</span></div>
+        <div class="cs-impact-card__desc">Role confusion and ownership errors dropped sharply once responsibilities were encoded in the system, not carried in people&rsquo;s heads.</div>
       </div>
       <div class="cs-impact-card cs-impact-card--primary">
-        <div class="cs-impact-card__num">3–5<small>wk</small></div>
-        <div class="cs-impact-card__label">Sourcing time <span>The bottleneck</span></div>
-        <div class="cs-impact-card__desc">Down from 2–3 months — the exact stage the whole project targeted.</div>
+        <div class="cs-impact-card__num">&darr;</div>
+        <div class="cs-impact-card__label">Decision time <span>Unification</span></div>
+        <div class="cs-impact-card__desc">Consolidating candidate data into a single view removed the module-hopping that slowed evaluation and broke context.</div>
       </div>
     </div>
 
-    <!-- Secondary, visibly demoted -->
-    <div class="cs-impact-secondary reveal">
-      <div class="cs-impact-secondary__num">+42%</div>
-      <div class="cs-impact-secondary__text">
-        <strong>Profile views</strong> rose as a second-order effect — improved discoverability followed the trust work, but it was never the goal.
-      </div>
-    </div>
-
-    <!-- Guardrail integrity callout -->
+    <!-- Guardrail -->
     <div class="cs-impact-guard reveal">
       <div class="cs-impact-guard__check">&#10003;</div>
       <div class="cs-impact-guard__text">
-        <strong>The guardrail held.</strong> Conversion rose without a measurable drop in downstream candidate quality — velocity, not noise.
+        <strong>The accountability guardrail held.</strong> The maker&ndash;checker step kept validation intact even as the funnel got faster — speed without recklessness.
       </div>
     </div>
   </div>
 </section>
 
-<!-- LEARNINGS / WHAT NEXT -->
+<!-- LEARNINGS -->
 <section class="cs-sec">
   <div class="cs-sec__inner">
     <div class="cs-sec__head">
@@ -741,23 +706,23 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
     <div class="cs-features reveal">
       <div class="cs-feature">
         <div class="cs-feature__num">01</div>
-        <h3 class="cs-feature__title">Trust drives action</h3>
-        <div class="cs-feature__row-text">Candidates apply when company information is transparent, complete, and legible — not when there's simply more of it.</div>
+        <h3 class="cs-feature__title">Structure reduces cognitive load</h3>
+        <div class="cs-feature__row-text">A predictable, staged system lets people follow the path instead of memorising it.</div>
       </div>
       <div class="cs-feature">
         <div class="cs-feature__num">02</div>
-        <h3 class="cs-feature__title">Solve the bottleneck, not the symptom</h3>
-        <div class="cs-feature__row-text">Offer drop-out and early attrition were downstream of a sourcing problem; fixing the source fixed the symptoms.</div>
+        <h3 class="cs-feature__title">Role clarity is critical in enterprise</h3>
+        <div class="cs-feature__row-text">Encoding ownership in the system — not in people — removes a whole class of confusion and error.</div>
       </div>
       <div class="cs-feature">
         <div class="cs-feature__num">03</div>
-        <h3 class="cs-feature__title">Reframing is the highest-leverage act</h3>
-        <div class="cs-feature__row-text">The shift from discoverability to hesitation changed every screen that followed.</div>
+        <h3 class="cs-feature__title">Systems should mirror real-world processes</h3>
+        <div class="cs-feature__row-text">The redesign worked because it matched how teams actually operate, not how the org looked years ago.</div>
       </div>
       <div class="cs-feature">
         <div class="cs-feature__num">04</div>
-        <h3 class="cs-feature__title">Unearned friction is the enemy</h3>
-        <div class="cs-feature__row-text">Remove it at the apply step; reintroduce it only where it helps the candidate win.</div>
+        <h3 class="cs-feature__title">Connected data enables insight</h3>
+        <div class="cs-feature__row-text">A unified lifecycle turns scattered records into clear, faster decisions.</div>
       </div>
     </div>
   </div>
@@ -768,13 +733,13 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
   <div class="cs-future__inner">
     <div class="cs-future__box reveal">
       <div>
-        <div class="cs-future__label">What I'd validate next</div>
-        <h3 class="cs-future__title">Does the trust effect <em>compound or saturate?</em></h3>
+        <div class="cs-future__label">What I&rsquo;d validate next</div>
+        <h3 class="cs-future__title">Does the system <em>teach itself?</em></h3>
       </div>
       <ul class="cs-future__list">
-        <li>Whether candidates need all signals, or funding + team carry most of the lift</li>
-        <li>Whether the optional intro video improves employer-side shortlisting, or just candidate confidence</li>
-        <li>Whether "confidence over discovery" holds for non-startup employers, where trust is less of a deficit</li>
+        <li>Whether new-hire time-to-proficiency actually dropped — the clearest proof the system now self-teaches</li>
+        <li>Whether the connected lifecycle surfaces bottlenecks proactively, or just makes them visible after the fact</li>
+        <li>Whether admin-level role config scales, or teams will eventually need safe self-serve</li>
       </ul>
     </div>
   </div>
@@ -784,8 +749,8 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
 <section class="cs-next">
   <div class="cs-next__inner">
     <div class="cs-next__label reveal">— Next project</div>
-    <h2 class="cs-next__title reveal">Admin <em>Rebuild</em></h2>
-    <a href="work-admin.html" class="cs-next__link" data-hover>
+    <h2 class="cs-next__title reveal">Theatre <em>Greetings</em></h2>
+    <a href="work-qube.html" class="cs-next__link" data-hover>
       View case study
       <span>&rarr;</span>
     </a>
@@ -795,8 +760,8 @@ button{font:inherit;background:none;border:none;cursor:none;color:inherit}
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer__inner">
-    <div><strong>Y. Portfolio</strong> · © 2026 · Coimbatore <span id="footerTime">— : —</span></div>
-    <div>Designed with care · v 1.0</div>
+    <div><strong>Y. Portfolio</strong> · &copy; 2026 · Coimbatore <span id="footerTime">&mdash; : &mdash;</span></div>
+    <div>Designed with care &middot; v 1.0</div>
   </div>
 </footer>
 

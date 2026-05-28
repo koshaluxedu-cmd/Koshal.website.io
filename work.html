@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work — All Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FAFAF7;--bg-soft:#F1EFE8;--bg-deep:#0A0A0A;
+  --ink:#0A0A0A;--ink-soft:#3A3A3A;--muted:#8A8A85;
+  --line:#E5E2DA;
+  --accent:#C8A961;
+  --accent-text:#5A4A1F;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Plus Jakarta Sans',sans-serif;
+  --gutter:clamp(20px,4vw,60px);
+  --max:1600px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;cursor:none;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:var(--bg)}
+
+.cursor{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:difference;will-change:transform}
+.cursor__dot{position:absolute;top:0;left:0;width:8px;height:8px;background:var(--bg);border-radius:50%;transform:translate(-50%,-50%);transition:width .4s var(--ease),height .4s var(--ease),opacity .3s var(--ease)}
+.cursor__ring{position:absolute;top:0;left:0;width:36px;height:36px;border:1px solid var(--bg);border-radius:50%;transform:translate(-50%,-50%);transition:width .5s var(--ease),height .5s var(--ease),background .4s var(--ease),border-color .4s var(--ease)}
+.cursor__label{position:absolute;top:0;left:0;transform:translate(-50%,-50%);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--bg);font-weight:500;white-space:nowrap;opacity:0;transition:opacity .3s var(--ease);mix-blend-mode:normal}
+.cursor.is-hover .cursor__dot{width:0;height:0;opacity:0}
+.cursor.is-hover .cursor__ring{width:56px;height:56px}
+.cursor.is-view .cursor__dot{opacity:0}
+.cursor.is-view .cursor__ring{width:110px;height:110px;background:var(--accent);border-color:var(--accent);mix-blend-mode:normal}
+.cursor.is-view .cursor__label{opacity:1}
+@media(max-width:768px){.cursor{display:none}body{cursor:auto}a{cursor:pointer}}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:24px var(--gutter);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;mix-blend-mode:difference;color:var(--bg)}
+.nav__logo{font-family:var(--serif);font-weight:400;font-size:22px;display:flex;align-items:center;gap:12px}
+.nav__logo em{font-style:italic;font-size:26px}
+.nav__logo-meta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+.nav__menu{display:flex;gap:28px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;justify-self:center}
+.nav__menu a{position:relative;padding:6px 0}
+.nav__menu a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav__menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav__time{justify-self:end;font-size:12px;letter-spacing:.15em;font-feature-settings:'tnum';opacity:.7}
+@media(max-width:768px){.nav__menu,.nav__time{display:none}}
+
+/* Page header */
+.page-head{padding:180px var(--gutter) 80px;max-width:var(--max);margin:0 auto}
+.page-head__overline{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.page-head__overline-dot{width:6px;height:6px;background:var(--accent);border-radius:50%}
+.page-head__title{font-family:var(--serif);font-weight:300;font-size:clamp(48px,8vw,120px);line-height:.92;letter-spacing:-.04em;margin-bottom:30px}
+.page-head__title em{font-style:italic;color:var(--accent-text)}
+.page-head__sub{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(18px,1.8vw,26px);line-height:1.4;color:var(--ink-soft);max-width:600px}
+.page-head__count{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+/* Projects grid */
+.projects{padding:40px var(--gutter) 160px;max-width:var(--max);margin:0 auto}
+.projects__grid{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+
+.proj{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;padding:80px 0;border-bottom:1px solid var(--line);transition:padding .6s var(--ease)}
+.proj:hover{padding-left:20px}
+.proj:nth-child(even){direction:rtl}
+.proj:nth-child(even) > *{direction:ltr}
+
+.proj__visual{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:3px;background:linear-gradient(135deg,#1a1a1a 0%,#0a0a0a 50%,#000 100%)}
+.proj__visual::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 25%,rgba(200,169,97,.2) 0%,transparent 55%)}
+.proj__visual-inner{position:absolute;inset:-4%;width:108%;height:108%;transition:transform 1.2s var(--ease)}
+.proj:hover .proj__visual-inner{transform:scale(1.05)}
+.proj__visual-overlay{position:absolute;inset:0;background:var(--ink);opacity:0;transition:opacity .5s var(--ease);z-index:2}
+.proj:hover .proj__visual-overlay{opacity:.12}
+.proj__num{position:absolute;top:20px;left:20px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--bg);background:rgba(10,10,10,.5);backdrop-filter:blur(8px);padding:5px 12px;border-radius:100px;z-index:3}
+
+.proj__content{padding:20px 0}
+.proj__tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-text);font-weight:600;margin-bottom:20px}
+.proj__title{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.5vw,64px);line-height:1;letter-spacing:-.02em;margin-bottom:20px}
+.proj__title em{font-style:italic;color:var(--accent-text)}
+.proj__desc{font-family:var(--serif);font-weight:300;font-size:19px;line-height:1.5;color:var(--ink-soft);margin-bottom:28px;max-width:480px}
+.proj__meta{display:flex;gap:36px;margin-bottom:28px;flex-wrap:wrap}
+.proj__meta-item{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.proj__meta-item strong{display:block;color:var(--muted);font-weight:500;margin-bottom:4px}
+.proj__meta-item span{font-family:var(--serif);font-style:italic;font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink)}
+.proj__link{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding-bottom:8px;border-bottom:1px solid var(--ink);transition:gap .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.proj__link:hover{gap:20px;color:var(--accent-text);border-color:var(--accent-text)}
+.proj__link svg{width:16px;transition:transform .4s var(--ease)}
+.proj__link:hover svg{transform:translateX(4px)}
+
+@media(max-width:900px){
+  .proj{grid-template-columns:1fr;gap:32px;padding:60px 0}
+  .proj:nth-child(even){direction:ltr}
+}
+
+/* Footer */
+.footer{padding:50px var(--gutter) 30px;background:var(--ink);color:var(--bg)}
+.footer__inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.footer strong{color:var(--bg);font-weight:500}
+
+.reveal{opacity:0;transform:translateY(40px)}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor">
+  <div class="cursor__ring"></div>
+  <div class="cursor__dot"></div>
+  <div class="cursor__label" id="cursorLabel">View</div>
+</div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo" data-hover>
+    <em>Y.</em>
+    <span class="nav__logo-meta">Portfolio · 2026</span>
+  </a>
+  <div class="nav__menu">
+    <a href="index.html" data-hover>Home</a>
+    <a href="work.html" data-hover>Work</a>
+    <a href="index.html#contact" data-hover>Contact</a>
+  </div>
+  <div class="nav__time" id="navTime">— : —</div>
+</nav>
+
+<header class="page-head">
+  <div class="page-head__overline">
+    <span class="page-head__overline-dot"></span>
+    <span>Selected work</span>
+  </div>
+  <h1 class="page-head__title">Projects in <em>focus.</em></h1>
+  <p class="page-head__sub">A collection of work spanning B2C products, hiring marketplaces, and internal enterprise systems — each built on research, structured thinking, and the belief that trust drives action.</p>
+  <div class="page-head__count">03 projects · 2023 — 2026</div>
+</header>
+
+<section class="projects">
+  <div class="projects__grid">
+
+    <a href="work-qube.html" class="proj reveal" data-view>
+      <div class="proj__visual">
+        <div class="proj__num">01</div>
+        <div class="proj__visual-inner"></div>
+        <div class="proj__visual-overlay"></div>
+      </div>
+      <div class="proj__content">
+        <div class="proj__tag">B2C · Mobile Product</div>
+        <h2 class="proj__title">Theatre <em>Greetings</em></h2>
+        <p class="proj__desc">A scalable B2C greeting platform built on confidence at every step — from slot selection to screen playback.</p>
+        <div class="proj__meta">
+          <div class="proj__meta-item"><strong>Role</strong><span>UX Strategy & Design</span></div>
+          <div class="proj__meta-item"><strong>Focus</strong><span>Trust & conversion</span></div>
+        </div>
+        <span class="proj__link">
+          View case study
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <a href="work-hiring.html" class="proj reveal" data-view>
+      <div class="proj__visual">
+        <div class="proj__num">02</div>
+        <div class="proj__visual-inner" style="background:linear-gradient(135deg,#2a2520 0%,#0f0d0a 50%,#000 100%)"></div>
+        <div class="proj__visual-overlay"></div>
+      </div>
+      <div class="proj__content">
+        <div class="proj__tag">B2C · Hiring Marketplace</div>
+        <h2 class="proj__title">Decision <em>Confidence</em></h2>
+        <p class="proj__desc">Increasing job applications by removing candidate hesitation, not adding discovery. The reframe that changed every screen.</p>
+        <div class="proj__meta">
+          <div class="proj__meta-item"><strong>Scope</strong><span>24 weeks</span></div>
+          <div class="proj__meta-item"><strong>Impact</strong><span>+35% apply rate</span></div>
+        </div>
+        <span class="proj__link">
+          View case study
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <a href="work-admin.html" class="proj reveal" data-view>
+      <div class="proj__visual">
+        <div class="proj__num">03</div>
+        <div class="proj__visual-inner" style="background:linear-gradient(135deg,#1c1c1c 0%,#0a0a0a 50%,#000 100%)"></div>
+        <div class="proj__visual-overlay"></div>
+      </div>
+      <div class="proj__content">
+        <div class="proj__tag">B2B · Internal Operations</div>
+        <h2 class="proj__title">Admin <em>Rebuild</em></h2>
+        <p class="proj__desc">Restructuring an internal operations platform so a growing org could scale without scaling chaos.</p>
+        <div class="proj__meta">
+          <div class="proj__meta-item"><strong>Timeline</strong><span>10 months</span></div>
+          <div class="proj__meta-item"><strong>Impact</strong><span>~40% fewer steps</span></div>
+        </div>
+        <span class="proj__link">
+          View case study
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div><strong>Y. Portfolio</strong> · © 2026 · Coimbatore <span id="footerTime">— : —</span></div>
+    <div>Designed with care · v 1.0</div>
+  </div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+const cursor = document.getElementById('cursor');
+const cursorLabel = document.getElementById('cursorLabel');
+let mx=0,my=0,cx=0,cy=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+function updCursor(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;cursor.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(updCursor)}
+updCursor();
+document.querySelectorAll('a,[data-hover]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cursor.classList.add('is-hover'));
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('is-hover'));
+});
+document.querySelectorAll('[data-view]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.classList.add('is-view');cursor.classList.remove('is-hover');cursorLabel.textContent='View'});
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('is-view'));
+});
+
+gsap.utils.toArray('.reveal').forEach(el=>{
+  gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'expo.out',
+    scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}
+  });
+});
+
+function updTime(){
+  const now=new Date();
+  const t=now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',hour12:false});
+  document.getElementById('navTime').textContent=t+' LOCAL';
+  document.getElementById('footerTime').textContent=t;
+}
+updTime();setInterval(updTime,1000);
+</script>
+</body>
+</html>
